@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f0d8;
+  color: #21160f;
+}
+
+
+/* NAVBAR */
+
+.wood-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 72px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.nav-background {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+
+  opacity: 0.98;
+}
+
+.nav-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(0,0,0,0.28);
+
+  border: 2px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(2px);
+
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+
+  background: #9be21f;
+  color: #1f140d;
+
+  border-color: white;
+}
+
+
+.navbar-logo {
+  height: 68px;
+  width: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+}
+
+/* HERO */
+
+.hero {
+  min-height: 700px;
+  background:
+    radial-gradient(circle at center, rgba(155, 226, 31, 0.35), transparent 35%),
+    linear-gradient(#2b1b10, #f7f0d8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero-content {
+  margin-top: 100px;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  padding: 45px;
+  border-radius: 30px;
+  border: 5px solid #1f140d;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.hero-logo {
+  width: 220px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  color: #82c91e;
+  margin: 10px 0;
+  text-shadow: 3px 3px 0 black;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+
+.main-button {
+  display: inline-block;
+  margin-top: 20px;
+  background: #82c91e;
+  color: #1f140d;
+  text-decoration: none;
+  padding: 16px 28px;
+  border-radius: 999px;
+  border: 3px solid #1f140d;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 5px 0 #1f140d;
+  transition: 0.2s;
+}
+
+.main-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 0 #1f140d;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 80px 35px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 44px;
+  margin-bottom: 35px;
+  color: #1f140d;
+}
+
+.game-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  width: 310px;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  border: 4px solid #1f140d;
+  box-shadow: 0 8px 0 #82c91e;
+  transition: 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 14px 0 #82c91e;
+}
+
+.game-card h3 {
+  font-size: 28px;
+  color: #82c91e;
+  text-shadow: 2px 2px 0 #1f140d;
+  margin-top: 0;
+}
+
+.game-card p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.contact-section {
+  background: #1f140d;
+  color: white;
+}
+
+.contact-section h2 {
+  color: #9be21f;
+}
+
+.more-section {
+  background: #fff8df;
+}
+
+.info-box {
+  max-width: 700px;
+  margin: 30px auto 0;
+  background: white;
+  padding: 25px;
+  border-radius: 22px;
+  border: 3px dashed #82c91e;
+  font-size: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .wood-banner {
+    width: 95%;
+  }
+}
+
+.game-link {
+  text-decoration: none;
+  color: inherit;
+
+  display: block;
+  width: 310px;
+}
+.game-card {
+  min-height: 280px;
+}
+
+.treasure-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.72);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  color: #9be21f;
+
+  text-shadow:
+    0 0 10px rgba(155,226,31,0.8),
+    0 0 20px rgba(155,226,31,0.6);
+
+  opacity: 0;
+
+  transition: 0.25s;
+}
+
+.treasure-card:hover .buy-overlay {
+  opacity: 1;
+}
